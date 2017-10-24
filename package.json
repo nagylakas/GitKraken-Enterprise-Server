@@ -1,0 +1,50 @@
+{
+  "name": "gitkraken-enterprise-server",
+  "version": "0.0.0",
+  "description": "Full weight free and open source realization of GitKraken's Enterprise Server",
+  "main": "src/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KillWolfVlad/GitKraken-Enterprise-Server.git"
+  },
+  "keywords": [
+    "gitkraken",
+    "enterprise",
+    "server",
+    "api"
+  ],
+  "author": "killwolfvlad",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/KillWolfVlad/GitKraken-Enterprise-Server/issues"
+  },
+  "homepage": "https://github.com/KillWolfVlad/GitKraken-Enterprise-Server#readme",
+  "engines": {
+    "node": "8.7.0",
+    "npm": "5.5.1"
+  },
+  "files": [
+    "bin",
+    "db",
+    "public",
+    "routes",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "bin": {
+    "gitkraken-enterprise-server": "bin/gitkraken-enterprise-server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chalk": "^2.3.0",
+    "commander": "^2.11.0",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "node-fetch": "^1.7.3",
+    "pg": "^7.3.0",
+    "zxcvbn": "^4.4.2"
+  },
+  "devDependencies": {}
+}
