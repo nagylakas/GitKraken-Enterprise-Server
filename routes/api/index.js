@@ -22,5 +22,10 @@
 
 const router = module.exports = require('express').Router();
 
+router.use('/oauth', require('./oauth'));
 router.use('/user', require('./user'));
+router.use('/activate', require('./activate.js'));
+router.use('/phone-home', require('./phone-home'));
 router.use('/ping', require('./ping.js'));
+router.use('/register', require('./register.js'));
+router.use('/resend-email', require('./resend-email.js'));

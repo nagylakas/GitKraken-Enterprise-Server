@@ -20,10 +20,6 @@
 
 'use strict';
 
-const gitkraken = require(global.__gitkrakenEnterpriseServer);
-
 const router = module.exports = require('express').Router();
 
-router.post('/', (req, res) => {
-    res.status(200).json(gitkraken.password.checkStrengthSync(req.body.password));
-});
+router.use('/token', require('./token.js'));

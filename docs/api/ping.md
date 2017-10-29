@@ -8,8 +8,8 @@ Checking the availability of the server
 
 ## Files
 
-- app/src/js/redux/domain/App/AppConstants.js#29
-- app/src/js/redux/domain/Registration/RegistrationSagas.js#55
+- `app/src/js/redux/domain/App/AppConstants.js`#29
+- `app/src/js/redux/domain/Registration/RegistrationSagas.js`#55
 
 ## Response
 

@@ -20,10 +20,13 @@
 
 'use strict';
 
-const gitkraken = require(global.__gitkrakenEnterpriseServer);
-
 const router = module.exports = require('express').Router();
 
-router.post('/', (req, res) => {
-    res.status(200).json(gitkraken.password.checkStrengthSync(req.body.password));
+router.get('/', (req, res) => {
+    res.status(200).end(`<h1>GitKraken Enterprise Server</h1>
+${req.query.name ? `<p>${req.query.name}</p>` : ''}
+${req.query.email ? `<p>${req.query.email}</p>` : ''}
+<p>AGPL-3.0</p>
+<p>Copyright (C) 2017  https://github.com/KillWolfVlad</p>
+<p>https://github.com/KillWolfVlad/GitKraken-Enterprise-Server</p>`);
 });

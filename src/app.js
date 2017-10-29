@@ -35,4 +35,8 @@ if (process.env.GITKRAKEN_RELEASE_DIR)
 
 app.use(bodyParser.json());
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 app.use('/', require('../routes'));

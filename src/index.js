@@ -22,5 +22,9 @@
 
 global.__gitkrakenEnterpriseServer = __dirname;
 
+exports.middleware = require('./middleware');
 exports.app = require('./app.js');
+exports.date = require('./date.js');
 exports.db = require('./db.js');
+exports.email = require('./email.js');
+exports.password = require('./password.js');

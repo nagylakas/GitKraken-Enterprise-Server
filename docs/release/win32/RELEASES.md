@@ -8,7 +8,7 @@ Update information for `win32`
 
 ## Files
 
-- app/src/appBootstrap/updateManager.js#41
+- `app/src/appBootstrap/updateManager.js`#41
 
 ## Response Headers
 

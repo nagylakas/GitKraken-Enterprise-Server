@@ -24,6 +24,18 @@ const gitkraken = require(global.__gitkrakenEnterpriseServer);
 
 const router = module.exports = require('express').Router();
 
-router.post('/', (req, res) => {
-    res.status(200).json(gitkraken.password.checkStrengthSync(req.body.password));
+router.use(gitkraken.middleware.auth);
+
+router.get('/', (req, res) => {
+    if (req.user)
+        res.status(200).json({
+            email: req.user.email,
+            name: req.user.name,
+            id: req.user.uid,
+            licenseExpiresAt: req.user.expires,
+            licensedFeatures: req.user.features,
+            status: req.user.status
+        });
+    else
+        res.status(400).json({});
 });

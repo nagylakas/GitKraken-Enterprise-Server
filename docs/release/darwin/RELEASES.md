@@ -8,7 +8,7 @@ Update information for `macOS`
 
 ## Files
 
-- app/src/appBootstrap/updateManager.js#41
+- `app/src/appBootstrap/updateManager.js`#41
 
 ## Request (example)
 

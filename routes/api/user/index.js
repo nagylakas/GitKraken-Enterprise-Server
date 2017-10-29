@@ -23,3 +23,4 @@
 const router = module.exports = require('express').Router();
 
 router.use('/password', require('./password'));
+router.use('/', require('./root.js'));

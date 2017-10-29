@@ -23,6 +23,8 @@
 const router = module.exports = require('express').Router();
 
 router.use('/api', require('./api'));
+router.use('/request_reset', require('./request_reset.js'));
+router.use('/', require('./root.js'));
 
 if (process.env.GITKRAKEN_RELEASE_PROXY)
-    router.use('/release', require('./release'));
+    router.use('/release', require('./release.js'));

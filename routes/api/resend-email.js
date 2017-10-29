@@ -20,10 +20,25 @@
 
 'use strict';
 
+const uuid = require('uuid');
+
 const gitkraken = require(global.__gitkrakenEnterpriseServer);
 
 const router = module.exports = require('express').Router();
 
-router.post('/', (req, res) => {
-    res.status(200).json(gitkraken.password.checkStrengthSync(req.body.password));
+router.post('/', async (req, res) => {
+    // language=PostgreSQL
+    const user = (await gitkraken.db.query(`SELECT
+                                              status,
+                                              email
+                                            FROM users
+                                            WHERE uid = $1;`, [req.body.id])).rows[0];
+    if (user && user.status === 'pending') {
+        const email_token = uuid.v4();
+        // language=PostgreSQL
+        await gitkraken.db.query(`INSERT INTO tokens
+        VALUES ($1, $2, NOW() + '1 DAY', 'email');`, [email_token, req.body.id]);
+        await gitkraken.email.sendEmailActivation(req, user.email, email_token);
+    }
+    res.status(200).json({});
 });

@@ -8,8 +8,8 @@ Check password strength
 
 ## Files
 
-- app/src/js/redux/domain/App/AppConstants.js#24
-- app/src/js/actions/RegistrationActions.js#325
+- `app/src/js/redux/domain/App/AppConstants.js`#24
+- `app/src/js/actions/RegistrationActions.js`#325
 
 ## Request Headers
 
