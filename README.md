@@ -35,7 +35,7 @@ Environment variable + value                                 | Description
 
 - Create `heroku` app
 - Add [`postgres`](https://elements.heroku.com/addons/heroku-postgresql) as addon
-- Create or migrate DataBase from [db](db) directory
+- Create or migrate DataBase from [db](./db) dirtory
 - Set all `EMAIL_*` variables
 - Optional: set `GITKRAKEN_RELEASE_PROXY=yes` variable
 - Push to `heroku`
@@ -60,7 +60,7 @@ https://staging-gitkraken-enterprise.herokuapp.com/
 
 > Warning! We can drop data base at any time! Don't use our free servers in serious business!
 
-# Need help or you want help?
+## Need help or you want help?
 
 1. Open issue
 2. Send PR
@@ -70,7 +70,7 @@ https://staging-gitkraken-enterprise.herokuapp.com/
 
 Field                                 | Our realization                          | Axosoft realization
 ------------------------------------- | ---------------------------------------- | ----------------------------------
-Support `GitKraken Enterprise` v3.2.0 | :white_check_mark:                       | :white_check_mark:
+Support `GitKraken Enterprise` v3.2.1 | :white_check_mark:                       | :white_check_mark:
 Open source                           | :white_check_mark:                       | :negative_squared_cross_mark:
 Pricing                               | Unlimited users absolutely free, forever | :dollar: for every user every year
 Support                               | GitHub Issues                            | Guaranteed email support
