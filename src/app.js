@@ -28,7 +28,8 @@ const app = module.exports = express();
 
 app.use(morgan('tiny'));
 
-app.use('/', express.static('../public'));
+if (process.env.GITKRAKEN_PUBLIC_DIR)
+    app.use('/', express.static(process.env.GITKRAKEN_PUBLIC_DIR));
 
 if (process.env.GITKRAKEN_RELEASE_DIR)
     app.use('/release', express.static(process.env.GITKRAKEN_RELEASE_DIR));

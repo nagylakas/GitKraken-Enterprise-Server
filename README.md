@@ -11,16 +11,18 @@ Execute `node bin\gitkraken-enterprise-server.js` with environment
 Environment variable + value                                 | Description
 ------------------------------------------------------------ | -------------------------------------
 `PORT=3000`                                                  | `http` server port
-`GITKRAKEN_RELEASE_PROXY=true`                               | Activate proxy mode for releases
+`GITKRAKEN_PUBLIC_DIR=/var/gitraken/public`                  | Path to GitKraken's public directory
 `GITKRAKEN_RELEASE_DIR=/var/gitraken/release`                | Path to GitKraken's release directory
+`GITKRAKEN_RELEASE_PROXY=true`                               | Activate proxy mode for releases
 `NODE_TLS_REJECT_UNAUTHORIZED=0`                             | Disable check `ssl` certificate
-`DATABASE_URL=postgresql://dbuser:password@server:5432/mydb` | DataBase url
 `DATABASE_DISABLE_SSL=true`                                  | Disable DataBase `ssl` mode
+`DATABASE_URL=postgresql://dbuser:password@server:5432/mydb` | DataBase url
 `EMAIL_HOST=smtp.example.com`                                | SMTP host to connection
+`EMAIL_MESSAGE_SECURE=true`                                  | Send messages with secure links
+`EMAIL_PASS=qwerty`                                          | SMTP user password
 `EMAIL_PORT=465`                                             | SMTP port to connection
 `EMAIL_SECURE=true`                                          | SMTP use secure?
 `EMAIL_USER=noreplay@smtp.example.com`                       | SMTP user name
-`EMAIL_PASS=qwerty`                                          | SMTP user password
 
 ### Common requirements
 
@@ -33,6 +35,7 @@ Environment variable + value                                 | Description
 
 - Create `heroku` app
 - Add [`postgres`](https://elements.heroku.com/addons/heroku-postgresql) as addon
+- Create or migrate DataBase from [db](db) directory
 - Set all `EMAIL_*` variables
 - Optional: set `GITKRAKEN_RELEASE_PROXY=yes` variable
 - Push to `heroku`

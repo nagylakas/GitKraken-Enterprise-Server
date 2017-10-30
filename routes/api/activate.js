@@ -45,5 +45,5 @@ router.get('/:token', async (req, res) => {
         SET expires = NULL
         WHERE token = $1 AND scope = 'email';`, [req.params.token]);
     }
-    res.status(200).end(`${req.query.email} successful activated!`);
+    res.status(200).end(`Your email successful activated!`);
 });

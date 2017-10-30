@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
 
 router.get('/:token', async (req, res) => {
     res.status(200).end(`<form name="reset" method="post">
-<label>Enter new password to ${req.query.email}</label>
+<label>Enter new password</label>
 <br>
 <input type="password" name="password">
 <br>

@@ -22,6 +22,10 @@
 
 const nodemailer = require('nodemailer');
 
+function getHost(req) {
+    return `${process.env.EMAIL_MESSAGE_SECURE ? 'https' : req.protocol}://${req.get('host')}`
+}
+
 const transport = exports.transport = nodemailer.createTransport({
     pool: true,
     host: process.env.EMAIL_HOST,
@@ -35,7 +39,7 @@ const transport = exports.transport = nodemailer.createTransport({
 
 exports.sendEmailActivation = (req, to, token) => {
     return new Promise((resolve, reject) => {
-        const activationLink = `${req.protocol}://${req.get('host')}/api/activate/${token}?email=${encodeURIComponent(to)}`;
+        const activationLink = `${getHost(req)}/api/activate/${token}`;
         transport.sendMail({
             from: `"GitKraken Enterprise Server" ${process.env.EMAIL_USER}`,
             to: to,
@@ -53,7 +57,7 @@ exports.sendEmailActivation = (req, to, token) => {
 
 exports.sendPasswordReset = (req, to, token) => {
     return new Promise((resolve, reject) => {
-        const resetLink = `${req.protocol}://${req.get('host')}/request_reset/${token}?email=${encodeURIComponent(to)}`;
+        const resetLink = `${getHost(req)}/request_reset/${token}`;
         transport.sendMail({
             from: `"GitKraken Enterprise Server" ${process.env.EMAIL_USER}`,
             to: to,
