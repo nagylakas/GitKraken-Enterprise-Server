@@ -26,16 +26,16 @@ Environment variable + value                                 | Description
 
 ### Common requirements
 
-- `nodejs` v8.8.1
-- `npm` v5.5.1
-- `PostgreSQL` v9.6.5
+- `nodejs` v9.2.x
+- `npm` v5.5.x
+- `PostgreSQL` v9.6.x
 - Email server with SMTP support (see [nodemailer](https://www.npmjs.com/package/nodemailer) for more information)
 
 ### Heroku
 
 - Create `heroku` app
 - Add [`postgres`](https://elements.heroku.com/addons/heroku-postgresql) as addon
-- Create or migrate DataBase from [db](./db) dirtory
+- Create or migrate DataBase from [db](./db) directory
 - Set all `EMAIL_*` variables
 - Optional: set `GITKRAKEN_RELEASE_PROXY=yes` variable
 - Push to `heroku`
@@ -70,13 +70,13 @@ https://staging-gitkraken-enterprise.herokuapp.com/
 
 Field                                 | Our realization                          | Axosoft realization
 ------------------------------------- | ---------------------------------------- | ----------------------------------
-Support `GitKraken Enterprise` v3.2.1 | :white_check_mark:                       | :white_check_mark:
+Support `GitKraken Enterprise` v3.2.2 | :white_check_mark:                       | :white_check_mark:
 Open source                           | :white_check_mark:                       | :negative_squared_cross_mark:
 Pricing                               | Unlimited users absolutely free, forever | :dollar: for every user every year
 Support                               | GitHub Issues                            | Guaranteed email support
 For use behind a firewall             | :white_check_mark:                       | :white_check_mark:
 Deploy to `Heroku`                    | :white_check_mark:                       | :negative_squared_cross_mark:
-Installation via `npm`                | :grey_question:                          | :negative_squared_cross_mark:
+Installation via `npm`                | :white_check_mark:                       | :negative_squared_cross_mark:
 Installed on your servers (`docker`)  | :question:                               | :white_check_mark:
 Installed on your servers (`linux`)   | :question:                               | :negative_squared_cross_mark:
 Installed on your servers (`windows`) | :question:                               | :negative_squared_cross_mark:
@@ -87,8 +87,6 @@ Full IT control over releases         | :white_check_mark:                      
 > :recycle: - this feature is currently only being developed!
 
 > :question: - this feature should work, but not tested!
-
-> :grey_question: - this package will never publish to `npm`, but you can install it locally from `GitHub`
 
 ## API status
 
