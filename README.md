@@ -27,7 +27,7 @@ Environment variable + value                                 | Description
 ### Common requirements
 
 - `nodejs` v9.2.x
-- `npm` v5.5.x
+- `yarn` v1.3.x
 - `PostgreSQL` v9.6.x
 - Email server with SMTP support (see [nodemailer](https://www.npmjs.com/package/nodemailer) for more information)
 
@@ -70,7 +70,7 @@ https://staging-gitkraken-enterprise.herokuapp.com/
 
 Field                                 | Our realization                          | Axosoft realization
 ------------------------------------- | ---------------------------------------- | ----------------------------------
-Support `GitKraken Enterprise` v3.2.2 | :white_check_mark:                       | :white_check_mark:
+Support `GitKraken Enterprise` v3.3.0 | :white_check_mark:                       | :white_check_mark:
 Open source                           | :white_check_mark:                       | :negative_squared_cross_mark:
 Pricing                               | Unlimited users absolutely free, forever | :dollar: for every user every year
 Support                               | GitHub Issues                            | Guaranteed email support
